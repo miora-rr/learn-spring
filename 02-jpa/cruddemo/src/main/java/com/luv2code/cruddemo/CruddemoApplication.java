@@ -22,9 +22,17 @@ public class CruddemoApplication {
 			//createStudent(studentDAO);
 			//createMultipleStudent(studentDAO);
 			//readStudent(studentDAO);
-			queryForStudents(studentDAO);
-
+			//queryForStudents(studentDAO);
+			queryForStudentsByLastName(studentDAO);
 		};
+	}
+
+	private void queryForStudentsByLastName(StudentDAO studentDAO) {
+		List<Student> theStudents = studentDAO.findByLastName("Jonas");
+
+		for (Student student : theStudents) {
+			System.out.println(student);
+		}
 	}
 
 	private void queryForStudents(StudentDAO studentDAO) {
