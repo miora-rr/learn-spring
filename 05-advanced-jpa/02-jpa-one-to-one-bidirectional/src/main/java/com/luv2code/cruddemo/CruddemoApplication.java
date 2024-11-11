@@ -28,10 +28,10 @@ public class CruddemoApplication {
 	}
 
 	private void deleteInstructorDetail(AppDAO appDAO) {
-		int id = 2;
+		int id = 4;
 		System.out.println("Deleting instructor detail id: " + id);
 
-		appDAO.deleteInstructorById(id);
+		appDAO.deleteInstructorDetailById(id);
 
 		System.out.println("Done!");
 	}

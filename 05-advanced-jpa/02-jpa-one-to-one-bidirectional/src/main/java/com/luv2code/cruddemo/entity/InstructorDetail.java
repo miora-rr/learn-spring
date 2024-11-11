@@ -18,7 +18,8 @@ public class InstructorDetail {
     // Add One-to-One annotation
     // MappedBy is used to look for instructorDetail in Instructor. It uses info from Instructor class
     // from joinColumn to help find Instructor associated with
-    @OneToOne(mappedBy = "instructorDetail", cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "instructorDetail",
+            cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.PERSIST})
     private Instructor instructor;
 
     public InstructorDetail() {}
