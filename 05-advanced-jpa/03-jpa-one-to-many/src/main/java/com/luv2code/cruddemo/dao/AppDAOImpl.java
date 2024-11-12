@@ -68,4 +68,20 @@ public class AppDAOImpl implements AppDAO{
 
         return query.getResultList();
     }
+
+    @Override
+    public Instructor findInstructorByIdJoinFetch(int theId) {
+        // Similar to FetchType.LAZY but better :)
+        // Make sur that there is a whitespace at the end of each line of the query
+        TypedQuery<Instructor> query = entityManager.createQuery(
+                "select i " + "from Instructor i "
+                + "JOIN FETCH i.courses " // Make it one query to get Courses
+                + "JOIN FETCH i.instructorDetail " // Make it one query to get instructorDetails
+                + "where i.id = :data", Instructor.class
+        );
+        // Don't forget this line
+        query.setParameter("data", theId);
+
+        return query.getSingleResult();
+    }
 }
