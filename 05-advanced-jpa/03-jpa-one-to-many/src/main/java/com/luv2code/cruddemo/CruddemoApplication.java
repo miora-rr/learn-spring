@@ -26,8 +26,22 @@ public class CruddemoApplication {
 			//findInstructorDetail(appDAO);
 			//deleteInstructorDetail(appDAO);
 
-			createInstructorWithCourses(appDAO);
+			//createInstructorWithCourses(appDAO);
+            findInstructorWithCourses(appDAO);
 		};
+	}
+
+	private void findInstructorWithCourses(AppDAO appDAO) {
+		int id = 1;
+		System.out.println("Find instructor id: " + id);
+
+		Instructor tempInstructor = appDAO.findInstructorById(id);
+
+		System.out.println("tempInstructor" + tempInstructor);
+		// Trying to get associated course with instructor. Will throw an exception
+		System.out.println("The associated courses: " + tempInstructor.getCourses());
+
+		System.out.println("Done!");
 	}
 
 	private void createInstructorWithCourses(AppDAO appDAO) {
