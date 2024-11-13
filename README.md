@@ -9,7 +9,6 @@ This course covers:
 - **Spring 6**
 - **Spring Core**
 - **Spring REST**
-- **Spring MVC**
 - **Spring Security**
 - **JPA**
 - **Hibernate**
