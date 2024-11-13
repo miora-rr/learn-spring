@@ -18,3 +18,6 @@ This course covers:
 This repository serves as my collection of exercises and practical applications as I progress through the course. It's a hands-on space to document and demonstrate my learning journey in Spring Boot.
 
 Thanks for stopping by!
+
+## 🛢️ Database Schema
+![Final schema of database](img/final-schema.jpg)
