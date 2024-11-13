@@ -80,7 +80,7 @@ public class Student {
     }
 
     // Add a convenience method
-    public void addStudent(Course theCourse) {
+    public void addCourse(Course theCourse) {
         if (courses == null) courses = new ArrayList<>();
 
         courses.add(theCourse);
